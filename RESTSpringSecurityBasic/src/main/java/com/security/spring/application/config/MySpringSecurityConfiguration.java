@@ -20,7 +20,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  * 			a.  add new configuration class for integrating spring configuration.
  * 			b.	add @EnableWebSecurity annotation at the top of class.
  * 			c.	extend WebSecurityConfigurerAdapter class in this class.
- * 			d.	Override configuration()method which has AuthenticationManagerBuilder as argument to customize the authenticationManager.
+ * 			d.	AuthenticationManager: 
+ * 				Override configuration()method which has AuthenticationManagerBuilder as argument to customize the authenticationManager.
  * 			
  * 			d.1.	InMemoryAuthentication: 
  * 				a.	user inmemory list of user,passwords and roles; Each user section seperated by and()
