@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
@@ -39,10 +40,11 @@ public class User {
 	
 	boolean enabled;
 	
-	@ManyToMany(cascade = CascadeType.MERGE)
-	@JoinTable(name = "user_authorities", 
-				joinColumns = @JoinColumn(name = "user_id"),
-				inverseJoinColumns = @JoinColumn(name = "authority_id")
-				)
-	private Set<String> roles;
+//	@OneToMany(cascade = CascadeType.MERGE)
+//	@JoinTable(name = "user_authorities", 
+//				joinColumns = @JoinColumn(name = "user_id"),
+//				inverseJoinColumns = @JoinColumn(name = "authority_id"))
+//	private Set<String> roles;
+	private String roles;
 }
+
