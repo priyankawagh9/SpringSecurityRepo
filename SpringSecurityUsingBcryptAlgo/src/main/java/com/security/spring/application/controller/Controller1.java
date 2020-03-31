@@ -9,7 +9,7 @@ public class Controller1 {
 
 	@GetMapping("/") 
 	public ModelAndView redirectMethod(){
-		return new ModelAndView("forward:/autherize");
+		return new ModelAndView("redirect:/autherize");
 	}
 	@GetMapping("/autherize")
 	public String autherizeUser() {
